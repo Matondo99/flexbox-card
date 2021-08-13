@@ -1,0 +1,97 @@
+body {
+    background-color: coral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    width: 90%;
+    max-width: 800px;
+    /* margin: 0 auto; */
+    background-color: #111D4A;
+    color: #FFF;
+    font-family: 'Blinker', sans-serif;
+    display: grid;
+    grid-template: 200px 1em auto auto 150px 1em / 1em auto auto 1em;
+    grid-template-areas: 
+    "img img  img img"
+    "... ...  ... ..."
+    "... ttl  ttl ..."
+    "... txt  txt ..."
+    "... rdmr btn ..."
+    "... ...  ... ...";
+}
+
+.card-img {
+    object-fit: cover;
+    grid-area: img;
+    width: 100%;
+    height: 100%;
+}
+
+.card-title {
+    font-size: 1.75rem;
+    color: #05CBE9;
+    line-height: 1;
+    margin: 0 0 .5em 0;
+    grid-area: ttl;
+}
+
+.card-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 0;
+    grid-area: txt;
+}
+
+.read-time {
+    font-size: 1.1875rem;
+    opacity: .6;
+    margin: 0;
+    line-height: 1;
+    grid-area: rdmr;
+    align-self: end;
+    
+}
+
+.read-time span {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: block;
+}
+
+.card-btn {
+    display: inline-block;
+    background-color: #05CBE9;
+    color: #232323;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: .5em 1.25em;
+    text-decoration: none;
+    grid-area: btn;
+    align-self: end;
+    justify-self: end;
+    white-space: nowrap;
+}
+
+@media all and (min-width: 600px) {
+    .card {
+        grid-template:1em auto auto 150px 1em / 200px 1em auto auto 1em;
+        grid-template-areas: 
+        "img ... ...  ... ..."
+        "img ... ttl  ttl ..."
+        "img ... txt  txt ..."
+        "img ... rdmr btn ..."
+        "img ... ...  ... ...";
+    }
+    .card-title {
+        font-size: 2.25rem;
+    }
+    .card-text {
+        font-size: 1.125rem;
+    }
+}
