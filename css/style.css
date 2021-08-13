@@ -1,0 +1,139 @@
+body {
+    background: plum;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 90%;
+    /* margin: 0 auto; */
+    max-width: 800px;
+    height: 90vh;
+    font-family: 'Blinker', sans-serif;
+    font-size: 1rem;
+    background-color: #111D4A;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
+
+.card-img {
+    object-fit: cover;
+    flex-basis: 30vh;
+    min-height: 0;
+    min-width: 0;
+}
+
+h2, p {
+    margin-top: 0;
+}
+
+/* =======================================
+==========================================
+Typography
+=========================================== */
+
+h2 {
+    font-size: 1.75rem;
+    color: #05CBE9;
+    font-weight: 900;
+    line-height: 1;
+    /* margin-top: -.25em; */
+}
+
+.card-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.read-time {
+    font-size: 1.1875rem;
+    line-height: 1;
+    opacity: .6;
+    margin: 0;
+    flex-basis: 0;
+}
+
+.read-time span {
+    font-weight: 900;
+    font-size: 1.25em;
+}
+
+.button {
+    display: inline-block;
+    color: #232323;
+    text-decoration: none;
+    padding: .5em 1.25em;
+    background-color: #05CBE9;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+/* =======================================
+==========================================
+Layout
+=========================================== */
+
+.card-content {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+}
+
+/* =======================================
+==========================================
+Media Queries
+=========================================== */
+
+@media all and (max-width: 310px) {
+    .card {
+        font-size: 1rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    .read-time {
+        margin-bottom: 1em;
+    }
+    .card-content {
+        padding: 1.25em 2em;
+    }
+    .card-bottom {
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+@media all and (min-width: 600px) {
+    body {
+        justify-content: center;
+    }
+    .card {
+        font-size: 1.125rem;
+        flex-direction: row;
+        height: 0;
+        min-height: 420px;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    .card-img {
+        flex-basis: 400px;
+        height: 420px;
+    }
+}
