@@ -34,6 +34,10 @@ body {
     font-size: var(--fs-100);
     line-height: 1.5;
     background: #cfcf4571;
+    /* For presentation purposes */
+    display: flex;
+    align-items: center;
+    height: 100vh;
 }
 
 img {
@@ -65,10 +69,116 @@ h3 {
 ==============   Typography  ===============
 ============================================ */
 
+.card-title {
+    font-size: var(--fs-300);
+    color: var(--clr-tone);
+    font-weight: var(--fw-200);
+}
+
+.main__up p {
+    font-family: var(--ff-200);
+}
+
+.reading-time {
+    color: rgba(255, 255, 255, .62);
+    letter-spacing: 1px;
+    line-height: 1;
+    flex: 0;
+}
+
+.reading-time span {
+    font-size: 1.5em;
+    font-weight: var(--fw-200);
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: var(--fs-200);
+    font-weight: var(--fw-200);
+    letter-spacing: 1px;
+    padding: .25em 1.25em;
+}
+
+.card-1-btn {
+    color: var(--clr-gb);
+    background: var(--clr-tone);
+}
+
+
+
+
 /*========================================== 
 ===============   Layout  ==================
 ============================================ */
 
+.container {
+    max-width: 750px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.card-1 {
+    width: 100%;
+    color: var(--clr-neutral);
+    background: var(--clr-gb);
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__down {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-height: 160px;
+    margin-top: auto;
+}
+
+
+/* ==========  Illustration  ============== */
+
+.card-1-img {
+    max-height: 230px;
+    object-fit: cover;
+}
+
+
+
+
 /*========================================== 
 =============   Media Query  ===============
 ============================================ */
+
+@media all and (min-width: 630px) {
+    body{
+        background: #cfcf45c9;
+    }
+
+    .card-1 {
+        font-size: var(--fs-101);
+        flex-direction: row;
+    }
+
+    .illust {
+        width: 33%;
+    }
+
+    .main {
+        width: 67%;
+    }
+
+    .card-1-img {
+        max-height: initial;
+        min-height: 100%;
+    }
+
+    .card-title {
+        font-size: var(--fs-301);
+    }
+}
