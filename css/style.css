@@ -91,6 +91,8 @@ h3 {
     font-weight: var(--fw-200);
 }
 
+/* ==============  Button  =============== */
+
 .btn {
     display: inline-block;
     text-decoration: none;
@@ -98,11 +100,22 @@ h3 {
     font-weight: var(--fw-200);
     letter-spacing: 1px;
     padding: .25em 1.25em;
+    border-radius: 2px;
 }
 
 .card-1-btn {
     color: var(--clr-gb);
     background: var(--clr-tone);
+    transform: scale(1);
+    transition: transform 500ms 150ms;
+}
+
+
+.card-1-btn:focus,
+.card-1-btn:hover {
+    color: #FFF;
+    background: #D47B13;
+    transform: scale(1.05);
 }
 
 
